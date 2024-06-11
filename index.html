@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowdfunding Contract Interaction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Crowdfunding DApp</h1>
+
+    <div class="form-container">
+        <h2>Create Presale</h2>
+        <form id="createPresaleForm">
+            <!-- Add input fields for all the necessary parameters -->
+            <input type="text" id="tokenName" placeholder="Token Name" required>
+            <input type="text" id="aboutToken" placeholder="About Token" required>
+            <input type="text" id="tokenID" placeholder="Token ID" required>
+            <input type="text" id="tokenSymbol" placeholder="Token Symbol" required>
+            <input type="number" id="totalSupply" placeholder="Total Supply" required>
+            <input type="number" id="presaleAllocation" placeholder="Presale Allocation" required>
+            <input type="number" id="liquidityAllocation" placeholder="Liquidity Allocation" required>
+            <input type="number" id="presaleRate" placeholder="Presale Rate" required>
+            <input type="number" id="listingRate" placeholder="Listing Rate" required>
+            <input type="number" id="softcap" placeholder="Softcap" required>
+            <input type="number" id="hardcap" placeholder="Hardcap" required>
+            <input type="number" id="min" placeholder="Min" required>
+            <input type="number" id="max" placeholder="Max" required>
+            <input type="number" id="startTime" placeholder="Start Time" required>
+            <input type="number" id="deadline" placeholder="Deadline" required>
+            <input type="text" id="image" placeholder="Image URL" required>
+            <input type="checkbox" id="feeOption"> Fee Option
+            <input type="number" id="liquidityPercentage" placeholder="Liquidity Percentage" required>
+            <input type="checkbox" id="isWhitelisted"> Is Whitelisted
+            <input type="text" id="nftTokenId" placeholder="NFT Token ID" required>
+            <input type="checkbox" id="useSaucerSwap"> Use SaucerSwap
+            <input type="number" id="whitelistDuration" placeholder="Whitelist Duration" required>
+            <input type="checkbox" id="burnUnsoldTokens"> Burn Unsold Tokens
+            <button type="submit">Create Presale</button>
+        </form>
+    </div>
+
+    <div class="form-container">
+        <h2>Donate to Presale</h2>
+        <form id="donatePresaleForm">
+            <input type="text" id="presaleId" placeholder="Presale ID" required>
+            <input type="number" id="donationAmount" placeholder="Amount (HBAR)" required>
+            <button type="submit">Donate</button>
+        </form>
+    </div>
+
+    <div class="form-container">
+        <h2>Request Refund</h2>
+        <form id="refundPresaleForm">
+            <input type="text" id="refundPresaleId" placeholder="Presale ID" required>
+            <button type="submit">Request Refund</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@hashgraph/sdk"></script>
+    <script src="app.js"></script>
+</body>
+</html>
